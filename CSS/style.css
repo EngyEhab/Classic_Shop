@@ -1,0 +1,464 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Lora', serif;
+    line-height: 1.86rem;
+    color: #606060;
+}
+
+h2
+{
+    font-size: 2rem;
+
+}
+
+h2 , h5 
+{
+    color: #303030;
+    padding: 2rem 0;
+    font-weight: 400;
+}
+
+h5
+{
+    font-weight: 500;
+    font-size: 1.125rem;
+
+}
+.header
+{
+    background-image: url('../images/Home.jpg');
+    background-size: 100% 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+}
+ul
+{
+   list-style-type: none;
+}
+.nav
+{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    padding-right: 3rem;
+    padding-top: 2rem;
+}
+.nav a
+{
+    padding: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.nav a:hover
+{
+    color: #121212;
+}
+.special-nav 
+{
+    background-color:#fff;
+    height:5rem;
+}
+
+.special-nav a
+{
+    color: #121212;
+    opacity: 0.5;
+}
+
+.special-nav a:hover
+{
+    opacity: 1;
+}
+.header-content
+{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.content
+{
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.3rem;
+    line-height: 2rem;
+
+}
+
+.content p
+{
+    width: 40%;
+}
+
+.content h1
+{
+    color: #fff;
+    font-size: 5rem;
+    margin: 2.5rem 0;
+    font-weight: 400;
+}
+
+.btn
+{
+    padding: 1rem 1.75rem;
+    margin: 1.5rem 0;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    border-style: none;
+    color: #121212;
+    font-weight: 700;
+}
+
+.btn1
+{
+    background-color: #fff;
+}
+
+.btn1:hover
+{
+    background-color: rgba(255, 255, 255, 0.92);
+}
+.container
+{
+    margin: 0 auto;
+    display: flex;
+}
+.text-side
+{
+    width: 50%;
+    padding: 7rem;
+}
+
+.products
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.product
+{
+    width: 45%;
+    border: 0.0625px solid #efefef;
+
+}
+.product img
+{
+    width: 100%;
+    border-bottom: 0.0625px solid #efefef;
+
+}
+.product-caption
+{
+    padding: 1.25rem;
+    color: #333333;
+    font-size: 1.2rem;
+}
+.product-caption .price
+{
+    color: #888;
+}
+.image-side
+{
+    width:50%;
+}
+.image-side img
+{
+    width: 100%;
+    height: 100%;
+
+}
+.center-text
+{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.full-width
+{
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 7rem ;
+}
+.best
+{
+    width: 20%;
+    background-color: #fff;
+}
+
+.features
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature
+{
+    width: 32%;
+    padding: 3rem 2rem;
+}
+
+.special-section
+{
+    background-image: url('../images/image7.jpg');
+    background-size: 100% 100%;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.special-content h2
+{
+    color: #fff;
+}
+
+.special-content p
+{
+    width: 100%;
+}
+
+.btn2
+{
+    background-color: transparent;
+    border: 0.1rem solid #fff;
+    color: #fff;
+}
+
+.btn2:hover
+{
+    background-color: #fff;
+    color: #121212; ;
+}
+.footer
+{
+    background-color: #f8f8f8;
+}
+
+.footer h4
+{
+    font-size: 1.25rem;
+    color: #303030;
+    padding: 2rem 0;
+}
+.footer p
+{
+    padding: 0.5rem 0 ;
+}
+.main-footer
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem 3rem;
+    
+}
+
+.sub-footer
+{
+    width: 20%;
+}
+
+
+.item
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.item img
+{
+   width: 20%;
+   border: 0.0625px solid #efefef;
+}
+
+hr
+{
+    color: rgba(0,0,0,0.06);
+}
+
+.sub-footer a
+{
+    text-decoration: none;
+    color: #606060;
+}
+
+.sub-footer a:hover
+{
+    color:#121212;
+}
+.bottom-footer
+{
+    background-color: #f1f1f1;
+}
+.copyright
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.contact-icons
+{
+    display: flex;
+    justify-content: space-around;
+    width: 12%;
+}
+.contact-icons a
+{
+    text-decoration: none;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.01rem;
+    background-color: rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border-radius: 50%;
+    color: #818181;
+}
+
+.search-section
+{
+    background-color: #f8f8f8;
+    padding: 3rem 2rem;
+
+}
+
+.search
+{
+    width: 50%;
+    margin: auto;
+}
+.search-field
+{
+    width: 90%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+.search-button
+{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    opacity: 0.5;
+}
+
+.search-button:hover
+{
+    opacity: 1;
+}
+
+
+.display-section
+{
+    background-color: #fff;
+    padding-top: 2rem;
+}
+
+.sort
+{
+    width: 80%;
+    margin: auto;
+    font-size: 1.1rem;
+
+}
+.select-area
+{
+    background-color: #fff;
+    padding: 0.65rem;
+    width: 25%;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    margin-left: 1rem;
+}
+
+
+
+.all-products
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 3rem auto;
+}
+.available-product
+{
+    width: 21%;
+    border: 0.0625px solid #efefef;
+    margin-bottom: 1rem;
+}
+
+.available-product img
+{
+    width: 100%;
+    border-bottom: 0.0625px solid #efefef;
+}
+
+
+.separate
+{
+    background-color: #f8f8f8;
+    height: 5rem;
+}
+
+
+
+@media (max-width:992px) {
+    html
+    {
+        font-size: 12px;
+    }  
+
+    .header-content .content p
+    {
+        width: 80%;
+    }
+
+    .nav
+    {
+        justify-content: center;
+        padding-right: 0;
+    }
+    .container , .products , .main-footer , .copyright
+    {
+        flex-wrap: wrap;
+    }
+    .text-side , .image-side , .center-text , .feature , .sub-footer , .contact-icons
+    {
+        width: 100%;
+    }
+
+    .items
+    {
+        margin: 0;
+    }
+    .best
+    {
+        width: 45%;
+        margin-bottom: 1rem;
+    }
+
+    .copyright , .contact-icons
+    {
+        justify-content: center;
+    }
+}
