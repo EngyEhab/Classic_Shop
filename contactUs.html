@@ -1,13 +1,10 @@
-<?php 
-    include 'connection.php ';
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Classic Shop</title>
+    <title>Contact - Classic Shop</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,32 +38,55 @@
 
     <div class="separate"></div>
 
-    <section class="display-section">
-
-        <div class="all-products">
-
-        <?php
-            $myquery="select * from `products`"; 
-            $result= mysqli_query($connection,$myquery);
-            while ($row=mysqli_fetch_array($result)) {
-        ?>
-
-        <div class="available-product">
-            <img src="<?php echo $row['Image']; ?>" alt="shoes"/>
-            <div class="product-caption">
-                <h4><?php echo $row['Name'];  ?></h4>
-                <span class="price">&#36; <?php echo $row['Price'];  ?>.00</span>
-            </div>
+    <section class="container">
+        <div class="contact-form">
+            <h3>Contact Form</h3>
+            <form method="post" class="form">
+                <input type="text" placeholder="Name" name="name" class="field half-width" required>
+                    <input type="email" placeholder="Email" name="email" class="field half-width" required>
+                    <input type="text" placeholder="Subject" name="subject" class="field" required>
+                    <textarea placeholder="Message" name="message" class="field"></textarea>
+                <div>
+                    <button name="contact-btn" class="btn btn3">SEND</button>
+                </div>
+            </form>
         </div>
+        <div class="contact-information">
+            <h3>Contact Information</h3>
+            <p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            <p>Our contact details:</p>
+            <p>
+                <span class="i">
+                    <i class="fa-regular fa-map"></i>
+                </span>   
+                Manchester St 123-78B, Random 7D, UK
+            </p>
 
+            <p>
+                <span class="i">
+                    <i class="fa-solid fa-phone"></i>
+                </span>
+                +46 123 456 789
+            </p>
 
+            <p>
+                <span class="i">
+                    <i class="fa-solid fa-headphones"></i>
+                </span>
+                +37 431 456 789
+            </p>
 
-        <?php
-                                                    }
-
-        ?>
+            <p>
+                <span class="i">
+                    <i class="fa-solid fa-envelope"></i>
+                </span>
+                hello@sitename.com
+            </p>
         </div>
+    </section>
 
+    <section class="location">
+        <img src="images/map.png" alt="map">
     </section>
 
 

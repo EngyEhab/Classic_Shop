@@ -22,16 +22,13 @@
                     <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="shop.html">Shop</a>
+                    <a href="shop.php">Shop</a>
                 </li>
                 <li>
                     <a href="about.html">About</a>
                 </li>
                 <li>
-                    <a href="blog.html">Blog</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>  
+                    <a href="contactUs.html">Contact</a>  
                 </li> 
             </ul>
         </div>
@@ -53,13 +50,12 @@
                 <label>Sort By:</label>
                 <select class="select-area" name="sorting" required>
                     <option> Select Option</option>
-                    <option value="low">
-                        <a href="#">Price: Low to High </a>
-                    </option>
-                    <option value="high">
-                        <a href="#">Price: High to Low</a>
-                    </option>
+                    <option value="low" >Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
                 </select>
+                <button class="sorting-button" name="sorting-button">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
             </form>
         </div>
 
@@ -74,17 +70,17 @@
         <div class="all-products">
 
         <?php
-            $st=$_POST['search-word'];
-            $myquery="select * from `products` where `Name` like '%$st%'"; 
-            $result= mysqli_query($connection,$myquery);
-            while ($row=mysqli_fetch_array($result)) {
+            $searchWord=$_POST['search-word'];
+            $data="select * from `products` where `Name` like '%$searchWord%'"; 
+            $finalData= mysqli_query($connection,$data);
+            while ($record=mysqli_fetch_array($finalData)) {
         ?>
 
         <div class="available-product">
-            <img src="<?php echo $row['Image']; ?>" alt="shoes"/>
+            <img src="<?php echo $record['Image']; ?>" alt="shoes"/>
             <div class="product-caption">
-                <h4><?php echo $row['Name'];  ?></h4>
-                <span class="price">&#36; <?php echo $row['Price'];  ?>.00</span>
+                <h4><?php echo $record['Name'];  ?></h4>
+                <span class="price">&#36; <?php echo $record['Price'];  ?>.00</span>
             </div>
         </div>
 
@@ -97,6 +93,55 @@
         ?>
         </div>
 
+
+
+
+        <?php
+
+        if (isset($_POST['sorting-button'])) {
+        ?>
+  
+        <div class="all-products">
+
+        <?php
+            $option=$_POST['sorting'];
+            if ($option=="low") {
+                $availableData="select * from `products` order by `Price` ASC";
+                $collectedData=mysqli_query($connection,$availableData);
+                while ($item=mysqli_fetch_array($collectedData)) {
+        ?>
+                <div class="available-product">
+                    <img src="<?php echo $item['Image']; ?>" alt="shoes"/>
+                    <div class="product-caption">
+                        <h4><?php echo $item['Name'];  ?></h4>
+                        <span class="price">&#36; <?php echo $item['Price'];  ?>.00</span>
+                    </div>
+                </div>
+
+
+
+        <?php
+                                                    }
+
+                            }
+            else{
+                $availableData="SELECT * FROM `products` order by `Price` DESC";
+                $collectedData=mysqli_query($connection,$availableData);
+                while ($item=mysqli_fetch_array($collectedData)) {
+        ?>
+                <div class="available-product">
+                    <img src="<?php echo $item['Image']; ?>" alt="shoes"/>
+                    <div class="product-caption">
+                        <h4><?php echo $item['Name'];  ?></h4>
+                        <span class="price">&#36; <?php echo $item['Price'];  ?>.00</span>
+                    </div>
+                </div>
+        <?php
+                                                    }
+                }
+                                                }
+        ?>
+        </div>
     </section>
 
 </body>

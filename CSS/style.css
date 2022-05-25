@@ -61,7 +61,6 @@ ul
     color: #fff;
     font-size: 1.25rem;
 }
-
 .nav a:hover
 {
     color: #121212;
@@ -191,6 +190,10 @@ ul
     flex-wrap: wrap;
     margin: auto;
     padding: 7rem ;
+}
+.different-background
+{
+    background-color: #f8f8f8;
 }
 .best
 {
@@ -352,16 +355,16 @@ hr
     border-radius: 0.5rem;
     font-size: 1rem;
 }
-.search-button
+.search-button , .sorting-button
 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     padding: 0.5rem;
     background-color: transparent;
     border: none;
     opacity: 0.5;
 }
 
-.search-button:hover
+.search-button:hover , .sorting-button:hover
 {
     opacity: 1;
 }
@@ -421,6 +424,85 @@ hr
 }
 
 
+.contact-form
+{
+    width: 60%;
+    padding: 5rem;
+   
+}
+.contact-form h3 , .contact-information h3
+{
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #303030;
+}
+
+.form
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.field
+{
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    padding: 0.75rem;
+    color: #55595c;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+textarea
+{
+    height: 15rem;
+}
+.half-width
+{
+    width: 49%;
+
+}
+
+.btn3
+{
+    background-color: #333333;
+    color: #fff;
+    margin: 0;
+}
+
+.contact-information
+{
+    width: 30%;
+    padding: 5rem 2.5rem;
+}
+
+.contact-information p , .different p
+{
+    padding-bottom: 1.5rem;
+}
+.i
+{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #333333;
+    color: #fff;
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    padding:0.5rem ;
+    padding-left: 0.7rem;
+}
+.location img
+{
+    width: 100%;
+}
+
+.different
+{
+    padding: 5rem;
+}
+
+
 
 @media (max-width:992px) {
     html
@@ -442,7 +524,7 @@ hr
     {
         flex-wrap: wrap;
     }
-    .text-side , .image-side , .center-text , .feature , .sub-footer , .contact-icons
+    .text-side , .image-side , .center-text , .feature , .sub-footer , .contact-icons , .contact-form , .contact-information
     {
         width: 100%;
     }
